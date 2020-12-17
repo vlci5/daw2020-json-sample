@@ -1,4 +1,4 @@
-fruteria = {
+let fruteria = {
   frutas: [
     {
       nombre: 'naranja',
@@ -42,3 +42,14 @@ console.log(
   'Tras escribir en la cookie, nombre de la 1a verdura = ' +
     newFruteria.verduras[0].nombre
 );
+
+let id = document.getElementById('i1');
+id.value = 'Hola';
+id.addEventListener('blur', (ev) => {
+  console.log(ev.target.id);
+  window.setTimeout(function () {
+    console.log('HOLA');
+    document.querySelector('input').focus();
+    document.querySelector('input').select();
+  }, 0);
+});
